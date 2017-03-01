@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.InetAddress;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Map.Entry;
@@ -23,7 +24,10 @@ public class ProxyServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                                 //  Create Get request dynamically to remote server
-        String url = "http://eap-app-demo.cloudapps.example.com"+request.getAttribute("uri")+"?"+request.getQueryString();
+    	
+    	String hostname = InetAddress.getLocalHost().getHostName();
+    	
+        String url = "http://" + hostname + ":8081" +request.getAttribute("uri")+"?"+request.getQueryString();
         
         System.out.println("!!!!!!!!!!!!!!! url " + url);
          
