@@ -23,7 +23,9 @@ public class ProxyServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                                 //  Create Get request dynamically to remote server
-        String url = "http://http://eap-app-demo.cloudapps.example.com"+request.getAttribute("uri")+"?"+request.getQueryString();
+        String url = "http://eap-app-demo.cloudapps.example.com"+request.getAttribute("uri")+"?"+request.getQueryString();
+        
+        System.out.println("!!!!!!!!!!!!!!! url " + url);
          
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
