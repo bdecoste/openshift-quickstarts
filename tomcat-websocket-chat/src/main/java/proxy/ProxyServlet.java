@@ -27,7 +27,7 @@ public class ProxyServlet extends HttpServlet {
     	
     	String hostname = InetAddress.getLocalHost().getHostName();
     	
-        String url = "http://" + "localhost" + ":8081" +request.getAttribute("uri")+"?"+request.getQueryString();
+        String url = "http://" + hostname + ":8081" +request.getAttribute("uri")+"?"+request.getQueryString();
         
         System.out.println("!!!!!!!!!!!!!!! url " + url);
          
