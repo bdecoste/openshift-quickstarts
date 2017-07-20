@@ -91,7 +91,7 @@ public class AddressBookManager {
       final String cacheName = jdgProperty(CACHE_NAME);  // The name of the address book  cache, as defined in your server config.
      final String cacheMatName = jdgProperty(CACHE_MAT_NAME);  // The name of the address book  cache, as defined in your server config.
      final String cacheAliasName = jdgProperty(CACHE_ALIAS_NAME);  // The name of the address book  cache, as defined in your server config.
-
+TOM BRADY RULES
       ConfigurationBuilder builder = new ConfigurationBuilder();
       builder.addServer()
             .host(host)
