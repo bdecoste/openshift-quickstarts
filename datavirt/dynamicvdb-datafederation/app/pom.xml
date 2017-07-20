@@ -9,6 +9,10 @@
     <name>JDV dyanmicvdb Quickstart Parent</name>
     <description>Parent pom for JDV dynamicvdb quickstart.  Includes materialization module if enabled.</description>
 
+    <modules>
+        <module>datagrid-materialization</module>
+    </modules>
+
     <profiles>
         <profile>
             <activation>
